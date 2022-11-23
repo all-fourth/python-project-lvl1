@@ -15,5 +15,9 @@ def logic(game):
             repetition += 1
             correct_answers += 1
         else:
-            return print(f"'{answer}' is wrong answer ;(. Correct answer was '{right_answer}'.\nLet's try again, {name}!")
+            return print(
+                f"'{answer}' is wrong answer ;(. "
+                f"Correct answer was '{right_answer}'. "
+                f"Let's try again, {name}!",
+            )
     print(f'Congratulations, {name}!')
