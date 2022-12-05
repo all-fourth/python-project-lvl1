@@ -19,7 +19,7 @@ def question_and_answer():
     rand_operator = random.choice(list(OPERATORS.keys()))
     right_answer = str(OPERATORS.get(rand_operator)(int_one, int_two))
     answer = prompt.string(
-        f'Question: {int_one}{rand_operator}{int_two}\nYour answer: ',
+        f'Question: {int_one} {rand_operator} {int_two}\nYour answer: ',
     )
 
     return answer, right_answer
