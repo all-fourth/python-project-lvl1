@@ -1,16 +1,19 @@
 from random import randint
 
-import prompt
-
 RULES = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
-def question_and_answer():
+def is_even():
+    random_num = randint(1, 100)
+    even = random_num % 2 == 0
+    return even, random_num
 
-    random_int = randint(1, 100)
-    answer = prompt.string(f'Question: {random_int}\nYour answer: ')
-    if random_int % 2 == 0:
+
+def getting_result():
+    even, random_num = is_even()
+    if even:
         right_answer = 'yes'
     else:
         right_answer = 'no'
-    return answer, right_answer
+    question = f'Question: {random_num}'
+    return question, right_answer

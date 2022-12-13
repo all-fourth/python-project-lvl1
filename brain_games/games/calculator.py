@@ -1,25 +1,19 @@
 import operator
 import random
-import types
-
-import prompt
 
 RULES = 'What is the result of the expression?'
-OPERATORS = types.MappingProxyType({
+OPERATORS = ({
     '+': operator.add,
     '-': operator.sub,
     '*': operator.mul,
 })
 
 
-def question_and_answer():
+def getting_result():
 
-    int_one = random.randint(1, 100)
-    int_two = random.randint(1, 100)
+    random_num1 = random.randint(1, 100)
+    random_num2 = random.randint(1, 100)
     rand_operator = random.choice(list(OPERATORS.keys()))
-    right_answer = str(OPERATORS.get(rand_operator)(int_one, int_two))
-    answer = prompt.string(
-        f'Question: {int_one} {rand_operator} {int_two}\nYour answer: ',
-    )
-
-    return answer, right_answer
+    right_answer = str(OPERATORS.get(rand_operator)(random_num1, random_num2))
+    question = f'Question: {random_num1} {rand_operator} {random_num2}'
+    return question, right_answer

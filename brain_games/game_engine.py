@@ -1,17 +1,19 @@
 import prompt
 
 
-def logic(game):
+def get_answer(game):
 
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
     print(game.RULES)
-    for repetition in range(3):
-        answer, right_answer = game.question_and_answer()
+    for repeat in range(3):
+        question, right_answer = game.getting_result()
+        print(question)
+        answer = prompt.string('Your answer: ')
         if answer == right_answer:
             print('Correct!')
-            repetition += 1
+            repeat += 1
         else:
             return print(
                 f"'{answer}' is wrong answer ;(. "
