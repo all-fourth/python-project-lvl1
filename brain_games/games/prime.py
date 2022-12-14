@@ -14,7 +14,7 @@ def is_prime(number: int):
 
 
 def get_game():
-    random_num = randint(2, 100)
+    random_num = randint(1, 100)
 
     if is_prime(random_num) <= 0:
         right_answer = 'yes'
