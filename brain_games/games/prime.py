@@ -4,7 +4,7 @@ RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
 def is_prime():
-    random_num = randint(1, 100)
+    random_num = randint(2, 100)
     prime = 0
     for getting_prime in range(2, random_num // 2 + 1):
         if random_num % getting_prime == 0:
