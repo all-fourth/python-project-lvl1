@@ -1,7 +1,7 @@
 import operator
 import random
 
-RULES = 'What is the result of the expression?'
+RULE = 'What is the result of the expression?'
 OPERATORS = ({
     '+': operator.add,
     '-': operator.sub,
@@ -9,7 +9,7 @@ OPERATORS = ({
 })
 
 
-def getting_result():
+def get_game():
 
     random_num1 = random.randint(1, 100)
     random_num2 = random.randint(1, 100)
